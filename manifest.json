@@ -1,0 +1,19 @@
+{
+  // Required
+  "manifest_version": 2,
+  "name": "Reddix",
+  "version": "0.1.1",
+  "description": "Kiss Reddit",
+
+  "author": "Volker Otto",
+  "content_scripts": [
+    {
+      "matches": ["*://www.reddit.com/*"],
+      "css": ["main.css"],
+      "js": ["main.js"],
+      "all_frames": true ,
+      "run_at" : "document_end"
+    }
+  ],
+  "web_accessible_resources": ["main.css","sprite-reddit.png"]
+}
