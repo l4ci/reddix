@@ -123,6 +123,7 @@ body{
 #header{
 	height: 100px 						!important;
 }
+#header .pagename,
 #header .pagename > *{
 	position:static 					!important;
 	content: normal 					!important;
@@ -149,6 +150,19 @@ body{
 	line-height: 60px 			!important;
 	height: 60px 						!important;
 	padding: 0 20px 0 10px 	!important;
+}
+#mail{
+	position: static !important;
+}
+#header .nohavemail{
+	height:10px !important;
+	width: 10px !important;
+	background: #79878e !important;
+}
+#header .havemail{
+	height:10px !important;
+	width: 10px !important;
+	background: #f36c3d !important;
 }
 #header .tabmenu{
 	position: relative 	!important;
