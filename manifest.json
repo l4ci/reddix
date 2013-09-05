@@ -2,8 +2,8 @@
   // Required
   "manifest_version": 2,
   "name": "Reddix",
-  "version": "0.1.1",
-  "description": "Kiss Reddit",
+  "version": "0.1",
+  "description": "Clean and simple reddit chrome extension",
 
   "author": "Volker Otto",
   "content_scripts": [
