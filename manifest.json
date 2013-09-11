@@ -1,8 +1,7 @@
 {
-  // Required
   "manifest_version": 2,
   "name": "Reddix",
-  "version": "0.1",
+  "version": "0.3",
   "description": "Clean and simple reddit chrome extension",
 
   "author": "Volker Otto",
@@ -10,10 +9,16 @@
     {
       "matches": ["*://www.reddit.com/*"],
       "css": ["main.css"],
-      "js": ["main.js"],
-      "all_frames": true ,
-      "run_at" : "document_end"
+      "js": [
+              "js/jquery-2.0.3.min.js",
+              "js/main.js"
+            ],
+      "all_frames": true
     }
   ],
-  "web_accessible_resources": ["main.css","sprite-reddit.png"]
+  "web_accessible_resources": [ 
+                                "js/jquery-2.0.3.min.js",
+                                "js/jquery-2.0.3.min.map",
+                                "sprite-reddit.png"
+                              ]
 }

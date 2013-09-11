@@ -8,9 +8,13 @@
 
 /*
  *  Colors:
- *  	Orange: #f36c3d
- *  	lighter: #f37f57
- *  	link orange: #f3c1ad;
+ *  	Orange: 	f36c3d
+ *  	lighter: 	f37f57
+ *  	links: 		f3c1ad;
+ *
+ * 		Blue: 		4d7abf;
+ * 		lighter: 	4e78ca;
+ * 		links: 		bacbf1;
  */
 
 
@@ -49,14 +53,14 @@ body{
 	background: white !important;
 	margin: 0 auto 		!important;
 	width: 100% 			!important;
-	max-width: 900px 	!important;
+	/*max-width: 900px 	!important; make it fluid*/
 	line-height:1.6 	!important;
 	font-size: 16px 	!important;
 	color: #3d4950 		!important;
 }
 /* TOP HEADER */	
 #sr-header-area {
-	background: #f36c3d 			!important;
+	background: #4d7abf 			!important;
 	height: 40px 							!important;
 	line-height: 40px 				!important;
 	text-transform: uppercase !important;
@@ -65,11 +69,11 @@ body{
 
 #sr-header-area .sr-bar a{
 	font-size: 13px !important;
-	color: #f3c1ad 			!important;
+	color: #bacbf1 			!important;
 }
 #sr-header-area .sr-bar a:hover{
-	color: #f3c1ad 										!important;
-	border-bottom: 1px solid #f3c1ad 	!important;
+	color: #bacbf1 										!important;
+	border-bottom: 1px solid #bacbf1 	!important;
 }
 #sr-header-area .sr-bar .selected  a{
 	color: white 				!important;
@@ -81,7 +85,7 @@ body{
 	margin:0 1px 				!important;
 }
 #sr-header-area #sr-more-link{
-	background: #f36c3d !important;
+	background: #4d7abf !important;
 	padding:0 5px 			!important;
 	color: white 				!important;
 	font-size: 11px 		!important;
@@ -99,32 +103,44 @@ body{
 	color: white 				!important;
 }
 .dropdown .selected:hover{
-	background-color: #f37f57 !important;
+	background-color: #4e78ca !important;
 }
 .drop-choices{
+	top: 40px 								!important;
 	border:none 							!important;
-	background: #f36c3d 			!important;
+	background: #4d7abf 			!important;
+}
+.drop-choices.lightdrop{
+	top: 296px !important;
+	left: 396px !important;
 }
 .drop-choices a.choice{
 	padding: 5px 10px 5px 20px 				!important;
-	border-bottom: 1px solid #f37f57 	!important;
+	border-bottom: 1px solid #4e78ca 	!important;
 	color: white 											!important;
 }
 .drop-choices a.choice:hover{
-	background: #f37f57 			!important;
+	background: #4e78ca 			!important;
 }
 .drop-choices .bottom-option{
 	border-top:none 					!important;
 	font-size: 11px 					!important;
 	font-style: italic 				!important;
 }
+.dropdown.lightdrop .selected{
+	color: #4d7abf !important;
+}
+.dropdown.lightdrop .selected:hover{
+	background: transparent !important;
+	color: #4d7abf !important;
+}
 
 /* Main Header*/
 #header{
 	height: 100px 						!important;
+	background: #fafafa 			!important;
 }
-#header .pagename,
-#header .pagename > *{
+#header .pagename{
 	position:static 					!important;
 	content: normal 					!important;
 	letter-spacing:1.5px 			!important;
@@ -134,6 +150,8 @@ body{
 	font-weight: normal 			!important;
 	display: block 						!important;
 	float: left 							!important;
+	max-width: 160px 					!important;
+	overflow: hidden 					!important;
 	height: 60px 							!important;
 	line-height: 60px 				!important;
 	margin:0 20px 						!important;
@@ -141,7 +159,6 @@ body{
 }
 
 #header #header-bottom-left{
-	background: #fafafa !important;
 	height: 60px 				!important;
 	line-height: 60px 	!important;
 }
@@ -162,34 +179,33 @@ body{
 #header .havemail{
 	height:10px !important;
 	width: 10px !important;
-	background: #f36c3d !important;
+	background: #4d7abf !important;
 }
 #header .tabmenu{
 	position: relative 	!important;
 	background: none 		!important;
 	border:none 				!important;
-	margin: 0 0 				!important;
 }
 #header .tabmenu li{
 	display: inline 		!important;
-	margin: 0 0 				!important;
 }
 #header .tabmenu li a{
 	background: none 			!important;
 	display: inline-block !important;
 	padding: 0 0 					!important;
-	font-size: 16px 			!important;
-	padding: 0 20px 			!important;
+	font-size: 14px 			!important;
+	text-transform: uppercase !important;
+	padding: 0 10px 			!important;
 	height: 40px 					!important;
 	line-height: 40px 		!important;
 	color: #79878e 				!important;
 }
 #header .tabmenu li.selected a{
 	border:none !important;
-	color: #f36c3d 				!important;
+	color: #4d7abf 				!important;
 }
 #header .tabmenu li a:hover{
-	color: #f36c3d 				!important;	
+	color: #4d7abf 				!important;	
 }
 /* CONTENT */
 .content{
@@ -206,7 +222,7 @@ body{
 	margin-right: 10px !important;
 }
 .thing .midcol .arrow{
-	background: url('sprite-reddit.png') !important;
+	background: url('chrome-extension://dccjdgekkmjancgidnkogkooeokpgjbn/sprite-reddit.png') !important;
 	margin: 2px 0 0 0 									!important;
 	margin-right: auto 									!important;
 	margin-left: auto 									!important;
@@ -233,11 +249,11 @@ body{
 	max-width: 50px 		!important;
 	height: auto 				!important;
 	max-height: 50px 		!important;
-	margin: 0 16px 0 0 	!important;
+	margin-right:16px 	!important;
 }
 .thing .title{
 	font-size: 18px 	!important;
-	font-weight: bold !important;
+	font-weight: normal !important;
 	color: #3d4950 		!important;
 	margin-top:-3px 	!important;
 }
@@ -245,14 +261,14 @@ body{
 	color: #999 			!important;
 }
 .thing .title:hover{
-	color: #f36c3d 		!important;
+	color: #4d7abf 		!important;
 }
 .link.last-clicked{
-	border-left:3px solid #f37f57 	!important;
+	border-left:3px solid #4e78ca 	!important;
 }
 .entry .domain,
 .entry .domain a{
-	color: rgba(162, 177, 185 , 0.5) !important;
+	color: rgba(162, 177, 185 , 0.8) !important;
 }
 .entry .domain:hover,
 .entry .domain a:hover{
@@ -262,19 +278,19 @@ body{
 	margin: 2px 8px 0 0 	!important;
 }
 .expando-button.video.collapsed{
-	background: url('sprite-reddit.png') !important;
+	background: url('chrome-extension://dccjdgekkmjancgidnkogkooeokpgjbn/sprite-reddit.png') !important;
 	background-position: -87px -584px !important;
 }
 .expando-button.video.expanded{
-	background: url('sprite-reddit.png') !important;
+	background: url('chrome-extension://dccjdgekkmjancgidnkogkooeokpgjbn/sprite-reddit.png') !important;
 	background-position: -29px -613px !important;
 }
 .expando-button.selftext.collapsed{
-	background: url('sprite-reddit.png') !important;
+	background: url('chrome-extension://dccjdgekkmjancgidnkogkooeokpgjbn/sprite-reddit.png') !important;
 	background-position: -61px -547px !important;
 }
 .expando-button.selftext.expanded{
-	background: url('sprite-reddit.png') !important;
+	background: url('chrome-extension://dccjdgekkmjancgidnkogkooeokpgjbn/sprite-reddit.png') !important;
 	background-position: -29px -584px !important;
 }
 .entry .usertext-body{
@@ -294,7 +310,8 @@ body{
 	color: #999 			!important;
 	margin: 5px 0 0 	!important;
 }
-.entry .tagline a{
+.entry .tagline a,
+.entry .tagline time{
 	color: #888 			!important;
 }
 .entry .tagline a:hover{
@@ -302,11 +319,8 @@ body{
 	text-decoration: none 				!important;
 	border-bottom:1px solid #333 	!important;
 }
-.entry .flat-list{
-	margin: 0 0 !important;
-}
 .entry .buttons li a{
-	margin: 0 7px 0 0 !important;
+	margin-right:7px !important;
 	font-weight: normal !important;
 	color: #a2b1b9 !important;
 	font-size: 12px !important;
@@ -325,18 +339,18 @@ body{
 
 .tabmenu.formtab li a{
 	text-transform: uppercase !important;
-	border: 1px solid #f37f57 !important;
+	border: 1px solid #4e78ca !important;
 	margin:0 10px 10px 0!important;
 	display: inline-block; !important;
 	text-align: center !important;
 	height: 32px !important;
 	line-height: 30px !important;
 	padding:0 12px !important;
-	color: #f37f57 !important;
+	color: #4e78ca !important;
 	font-size:14px !important;
 }
 .tabmenu.formtab li.selected a{
-	background: #f37f57 !important;
+	background: #4e78ca !important;
 	color: white !important;
 }
 /* INPUT */
@@ -351,7 +365,7 @@ textarea{
 
 /* Button */
 button{
-	border: 1px solid #f37f57 !important;
+	border: 1px solid #4e78ca !important;
 	margin:10px 0 !important;
 	display: block !important;
 	text-align: center !important;
@@ -359,32 +373,31 @@ button{
 	height: 32px !important;
 	line-height: 30px !important;
 	padding:0 12px !important;
-	color: #f37f57 !important;
+	color: #4e78ca !important;
 	font-size:16px !important;
 }
 button:hover{
-	background: #f37f57 !important;
+	background: #4e78ca !important;
 	color: white !important;
 }
 .morelink{
-	border: 1px solid #f37f57 !important;
+	border: 1px solid #4e78ca !important;
 	position: static !important;
 	margin:10px 0 !important;
-	color: #f37f57 !important;
+	color: #4e78ca !important;
 }
 .morelink a{
-	color: #f37f57 !important;
+	color: #4e78ca !important;
 	font-size:16px !important;
 }
 .morelink a:hover{
-	background: #f37f57 !important;
+	background: #4e78ca !important;
 	color: white !important;
 }
 /* Sidebar */
 .side{
 	width: 270px !important;
 	background: none !important;
-	margin: 0 0 !important;
 	padding: 10px 15px !important;
 }
 .side .spacer{
@@ -409,14 +422,13 @@ button:hover{
 	border:1px solid #e6e6e6 	!important;
 	max-height: 300px 				!important;
 	width: 250px 							!important;
-	margin: 0 0 							!important;	
 	padding: 10px 						!important;
 	overflow: auto 						!important;
 }
 .side .goldvertisement{
 	border:1px solid #c4b487 !important;
 	font-size: 13px !important;
-	margin: 0 0 10px 0 !important;
+	margin-bottom:10px !important;
 	height: auto !important;
 	padding: 10px !important;
 }
@@ -436,11 +448,11 @@ button:hover{
 	background: none 		!important;
 	padding: 0 0 				!important;
 	border: none 				!important;
-	color: #f36c3d 			!important;
+	color: #4d7abf 			!important;
 }
 .nextprev a:hover{
-	color: #f36c3d 			!important;
-	border-bottom: 1px solid #f36c3d !important;
+	color: #4d7abf 			!important;
+	border-bottom: 1px solid #4d7abf !important;
 }
 .nextprev a:last-child{
 	margin-right:40px !important;
@@ -453,18 +465,27 @@ button:hover{
 .footer-parent,
 .debuginfo{
 	background: #e9f2f7 !important;
-	padding: 0 0 				!important;
-	margin: 0 0 				!important;
+}
+.debuginfo{
+	display: none !important;
+}
+#show_footer{
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	cursor: pointer;
+}
+.footer-parent{
+	display: block 					!important;
+	font-size: 12px 				!important;
 }
 .footer{
-	border:none 				!important;
-	margin: 0 0 				!important;
-	display: block !important;
-	padding: 15px 30px 0 !important;
+	padding: 15px 30px 0 	!important;
+	width: 70% !important;
 }
 .footer .col{
 	width: 25% !important;
-	border:none !important;
+	height: auto !important;
 }
 .footer .flat-vert .title{
 	font-size:13px !important;
@@ -484,5 +505,24 @@ button:hover{
 }
 .footer-parent .bottommenu{
 	font-size: 12px !important;
-	padding: 0 30px !important;
+	padding: 0 30px 15px !important;
+}
+
+@media (max-width: 700px) {
+	.side{
+		display: none !important;
+	}
+	#header{
+		height: auto !important;
+	}
+	.pagename,
+	.tabmenu{
+		display: inline-block !important;
+	}
+	#header-bottom-left,
+	#header-bottom-right{
+		position: static !important;
+		float: none !important;
+		display: block !important;
+	}
 }
