@@ -33,3 +33,10 @@ $('#show_footer').click(function(){
 	$('.footer').slideDown();
 	$('.bottommenu').fadeIn();
 });
+
+// Show Comment Link Buttons only on hover
+var $cml = $('.comment .noncollapsed');
+$('.comment .flat-list.buttons').hide();
+$cml.click(function(){
+	$(this).find('.flat-list.buttons').toggle();
+});

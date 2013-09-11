@@ -10,11 +10,11 @@
  *  Colors:
  *  	Orange: 	f36c3d
  *  	lighter: 	f37f57
- *  	links: 		f3c1ad;
+ *  	links: 		f3c1ad
  *
- * 		Blue: 		4d7abf;
- * 		lighter: 	4e78ca;
- * 		links: 		bacbf1;
+ * 		Blue: 		6292bf
+ * 		lighter: 	749fc6
+ * 		links: 		a8c2db / a8c2db
  */
 
 
@@ -60,7 +60,7 @@ body{
 }
 /* TOP HEADER */	
 #sr-header-area {
-	background: #4d7abf 			!important;
+	background: #6292bf 			!important;
 	height: 40px 							!important;
 	line-height: 40px 				!important;
 	text-transform: uppercase !important;
@@ -69,11 +69,11 @@ body{
 
 #sr-header-area .sr-bar a{
 	font-size: 13px !important;
-	color: #bacbf1 			!important;
+	color: #a8c2db 			!important;
 }
 #sr-header-area .sr-bar a:hover{
-	color: #bacbf1 										!important;
-	border-bottom: 1px solid #bacbf1 	!important;
+	color: #a8c2db 										!important;
+	border-bottom: 1px solid #a8c2db 	!important;
 }
 #sr-header-area .sr-bar .selected  a{
 	color: white 				!important;
@@ -85,7 +85,7 @@ body{
 	margin:0 1px 				!important;
 }
 #sr-header-area #sr-more-link{
-	background: #4d7abf !important;
+	background: #6292bf !important;
 	padding:0 5px 			!important;
 	color: white 				!important;
 	font-size: 11px 		!important;
@@ -103,39 +103,30 @@ body{
 	color: white 				!important;
 }
 .dropdown .selected:hover{
-	background-color: #4e78ca !important;
+	background-color: #749fc6 !important;
 }
 .drop-choices{
 	top: 40px 								!important;
 	border:none 							!important;
-	background: #4d7abf 			!important;
-}
-.drop-choices.lightdrop{
-	top: 296px !important;
-	left: 396px !important;
+	background: #6292bf 			!important;
 }
 .drop-choices a.choice{
 	padding: 5px 10px 5px 20px 				!important;
-	border-bottom: 1px solid #4e78ca 	!important;
+	border-bottom: 1px solid #749fc6 	!important;
 	color: white 											!important;
 }
 .drop-choices a.choice:hover{
-	background: #4e78ca 			!important;
+	background: #749fc6 			!important;
 }
 .drop-choices .bottom-option{
 	border-top:none 					!important;
 	font-size: 11px 					!important;
 	font-style: italic 				!important;
 }
-.dropdown.lightdrop .selected{
-	color: #4d7abf !important;
-}
-.dropdown.lightdrop .selected:hover{
-	background: transparent !important;
-	color: #4d7abf !important;
-}
 
-/* Main Header*/
+/**
+ * Main Header
+ */
 #header{
 	height: 100px 						!important;
 	background: #fafafa 			!important;
@@ -172,14 +163,14 @@ body{
 	position: static !important;
 }
 #header .nohavemail{
-	height:10px !important;
-	width: 10px !important;
+	height:13px !important;
+	width: 13px !important;
 	background: #79878e !important;
 }
 #header .havemail{
-	height:10px !important;
-	width: 10px !important;
-	background: #4d7abf !important;
+	height:13px !important;
+	width: 13px !important;
+	background: #6292bf !important;
 }
 #header .tabmenu{
 	position: relative 	!important;
@@ -202,17 +193,23 @@ body{
 }
 #header .tabmenu li.selected a{
 	border:none !important;
-	color: #4d7abf 				!important;
+	color: #6292bf 				!important;
 }
 #header .tabmenu li a:hover{
-	color: #4d7abf 				!important;	
+	color: #6292bf 				!important;	
 }
-/* CONTENT */
+
+/**
+ * CONTENT
+ */
 .content{
 	padding: 20px	10px 10px 			!important;
 	border-top:1px solid #dfdfdf 	!important;
 }
-/* POST */
+
+/**
+ * POST
+ */
 .thing,
 .link{
 	margin:0 0 20px 0 !important;
@@ -261,10 +258,10 @@ body{
 	color: #999 			!important;
 }
 .thing .title:hover{
-	color: #4d7abf 		!important;
+	color: #6292bf 		!important;
 }
 .link.last-clicked{
-	border-left:3px solid #4e78ca 	!important;
+	border-left:3px solid #749fc6 	!important;
 }
 .entry .domain,
 .entry .domain a{
@@ -339,18 +336,18 @@ body{
 
 .tabmenu.formtab li a{
 	text-transform: uppercase !important;
-	border: 1px solid #4e78ca !important;
+	border: 1px solid #749fc6 !important;
 	margin:0 10px 10px 0!important;
 	display: inline-block; !important;
 	text-align: center !important;
 	height: 32px !important;
 	line-height: 30px !important;
 	padding:0 12px !important;
-	color: #4e78ca !important;
+	color: #749fc6 !important;
 	font-size:14px !important;
 }
 .tabmenu.formtab li.selected a{
-	background: #4e78ca !important;
+	background: #749fc6 !important;
 	color: white !important;
 }
 /* INPUT */
@@ -365,35 +362,92 @@ textarea{
 
 /* Button */
 button{
-	border: 1px solid #4e78ca !important;
-	margin:10px 0 !important;
-	display: block !important;
+	border: 1px solid #749fc6 !important;
+	margin:10px 10px 10px 0 !important;
+	display: inline-block !important;
 	text-align: center !important;
 	font-weight: bold !important;
 	height: 32px !important;
 	line-height: 30px !important;
 	padding:0 12px !important;
-	color: #4e78ca !important;
+	color: #749fc6 !important;
 	font-size:16px !important;
 }
 button:hover{
-	background: #4e78ca !important;
+	background: #749fc6 !important;
 	color: white !important;
 }
 .morelink{
-	border: 1px solid #4e78ca !important;
+	border: 1px solid #749fc6 !important;
 	position: static !important;
 	margin:10px 0 !important;
-	color: #4e78ca !important;
+	color: #749fc6 !important;
 }
 .morelink a{
-	color: #4e78ca !important;
+	color: #749fc6 !important;
 	font-size:16px !important;
 }
 .morelink a:hover{
-	background: #4e78ca !important;
+	background: #749fc6 !important;
 	color: white !important;
 }
+
+/**
+ * COMMENT PAGE
+ */
+.commentarea{
+	position: relative !important;
+}
+.panestack-title .title,
+.panestack-title .title-button {
+	margin-right:10px !important;
+	font-size: 14px !important;
+}
+.menuarea .spacer .dropdown-title,
+.menuarea .spacer .dropdown{
+	font-size: 14px !important;
+}
+.dropdown.lightdrop .selected{
+	color: #6292bf !important;
+	padding: 5px 10px 5px 20px !important;
+}
+.dropdown.lightdrop .selected:hover{
+	background: #6292bf !important;
+	color: #fff !important;
+}
+.drop-choices.lightdrop{
+	position: absolute !important;
+	font-size: 14px !important;
+	top: 53px !important;
+	left: 88px !important;
+}
+.comment .expand{
+	margin-right:6px !important;
+}
+.comment .tagline{
+	margin:0 0 !important;
+	font-size: 12px !important;
+}
+.comment .author{
+	font-weight: normal !important;
+}
+.comment .collapsed{
+	font-size: 12px !important;
+}
+.comment .thing{
+	margin: 0 0 !important;
+}
+.comment .entry{
+	margin-top:5px !important;
+}
+.comment .usertext-body{
+	width: 90% !important;
+}
+.comment .morecomments{
+	font-size: 12px !important;
+	font-weight: normal !important;
+}
+
 /* Sidebar */
 .side{
 	width: 270px !important;
@@ -424,6 +478,7 @@ button:hover{
 	width: 250px 							!important;
 	padding: 10px 						!important;
 	overflow: auto 						!important;
+	font-size: 14px !important;
 }
 .side .goldvertisement{
 	border:1px solid #c4b487 !important;
@@ -448,11 +503,11 @@ button:hover{
 	background: none 		!important;
 	padding: 0 0 				!important;
 	border: none 				!important;
-	color: #4d7abf 			!important;
+	color: #6292bf 			!important;
 }
 .nextprev a:hover{
-	color: #4d7abf 			!important;
-	border-bottom: 1px solid #4d7abf !important;
+	color: #6292bf 			!important;
+	border-bottom: 1px solid #6292bf !important;
 }
 .nextprev a:last-child{
 	margin-right:40px !important;
@@ -507,6 +562,7 @@ button:hover{
 	font-size: 12px !important;
 	padding: 0 30px 15px !important;
 }
+
 
 @media (max-width: 700px) {
 	.side{
