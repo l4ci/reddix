@@ -7,9 +7,14 @@ Currently working on this - if you would like to help - just message me!
 
 Here are some screenshot
 
+Homepage - hover over the first item, second was last visited
 ![Homepage](https://github.com/l4ci/reddix/raw/master/images/homepage.png)
 
-![Small View](https://github.com/l4ci/reddix/raw/master/images/small.png)
+Narrow View - with collapsed footer
+![Narrow View](https://github.com/l4ci/reddix/raw/master/images/small.png)
+
+Dropdown Menu 
+![Dropdown](https://github.com/l4ci/reddix/raw/master/images/dropdown.png)
 
 ## Future
 - RES Support
