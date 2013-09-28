@@ -23,11 +23,37 @@ $menu.click(function() {
   $(this).nextAll('.drop-choices').slideToggle();
 });
 
+// Tabmenu
+var $tabmenu = $('.tabmenu');
+var $save = $tabmenu.find('.selected').text();
+
+showTabmenu();
+
+$(window).resize(function() {
+	showTabmenu();
+});
+
+function showTabmenu(){
+	if ($(window).width() <= 700) {
+		if ($("#show_tabmenu").length <= 0){
+			$tabmenu.parent().prepend('<a id="show_tabmenu">'+$save+'</a>');
+			$tabmenu.hide();
+			$('#show_tabmenu').click(function() {
+			  $tabmenu.slideToggle();
+			});
+		}
+	}else{
+		$("#show_tabmenu").remove();
+		$tabmenu.show();
+	}
+};
+
+
 // Replace Footer Menu with Link + Animation
 var $footer = $('.footer-parent');
 $('.footer').hide();
 $('.bottommenu').hide();
-$footer.prepend('<a id="show_footer">Show Footer Navigation</a>');
+$footer.prepend('<a id="show_footer"></a>');
 $('#show_footer').click(function(){
 	$(this).hide();
 	$('.footer').slideDown();

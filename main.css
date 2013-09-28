@@ -23,15 +23,17 @@
 #header-img,
 #header-img-a,
 .nub,
-.thing .rank{
+.thing .rank,
+.sr-list,
+#sr-more-link
+{
 	display: none !important;
 }
 
 /* 
  * RESET ALL 
  *
- * to overwrite all the subreddit styles - 
- * also load the css before pageload - AND afterwards with js (so really every style gets overwritten)
+ * to overwrite all the subreddit styles
  */
 *{
 	font-family:'Helvetica Neue',Helvetica,Arial,sans-serif !important;
@@ -53,10 +55,12 @@ body{
 	background: white !important;
 	margin: 0 auto 		!important;
 	width: 100% 			!important;
-	/*max-width: 900px 	!important; make it fluid*/
+	max-width: 900px 	!important;
 	line-height:1.6 	!important;
 	font-size: 16px 	!important;
 	color: #3d4950 		!important;
+	border:7px solid rgba(0,0,0,0.1) !important;
+	border-top: 0 		!important;
 }
 /* TOP HEADER */	
 #sr-header-area {
@@ -89,10 +93,6 @@ body{
 	padding:0 5px 			!important;
 	color: white 				!important;
 	font-size: 11px 		!important;
-}
-#sr-header-area .sr-list{
-	padding:0 0 0 10px 	!important;
-	overflow: auto 			!important;
 }
 
 /**
@@ -154,26 +154,42 @@ body{
 	line-height: 60px 	!important;
 }
 #header #header-bottom-right{
-	font-size: 12px 				!important;
-	line-height: 60px 			!important;
-	height: 60px 						!important;
-	padding: 0 20px 0 10px 	!important;
+	letter-spacing: 0.3px 	!important;
+	line-height: 40px 			!important;
+	height: 40px 						!important;
+	padding: 0 30px 0 10px 	!important;
+	top:0 									!important;
+}
+#header #header-bottom-right *,
+#header #header-bottom-right .pref-lang{
+	font-size: 13px 				!important;
+	font-weight: normal 		!important;
+	color: #fff 						!important;
+}
+#header #header-bottom-right > .separator{
+	color: transparent !important;
+	margin: 0 3px !important;
 }
 #mail{
-	position: static !important;
+	position: absolute !important;
+	top:0 !important;
+	right: 0 !important;
+	height:40px !important;
+	width: 20px !important;
 }
 #header .nohavemail{
-	height:13px !important;
-	width: 13px !important;
-	background: #79878e !important;
+	background: #749fc6 !important;
+}
+#header .nohavemail:hover{
+	background: #506f8a !important;
 }
 #header .havemail{
-	height:13px !important;
-	width: 13px !important;
-	background: #6292bf !important;
+	background: #506f8a !important;
 }
 #header .tabmenu{
-	position: relative 	!important;
+	position: absolute 	!important;
+	top:40px 						!important;
+	left: 180px					!important;
 	background: none 		!important;
 	border:none 				!important;
 }
@@ -308,22 +324,33 @@ body{
 	margin: 5px 0 0 	!important;
 }
 .entry .tagline a,
-.entry .tagline time{
+.entry .tagline time,
+.entry .tagline .author,
+.entry .tagline .flair,
+.entry .tagline .userattrs,
+.entry .tagline .stickied-tagline{
+	font-size: 12px 	!important;
 	color: #888 			!important;
+}
+.entry .tagline .author{
+	margin-right:5px !important;
 }
 .entry .tagline a:hover{
 	color: #333 									!important;
 	text-decoration: none 				!important;
 	border-bottom:1px solid #333 	!important;
 }
+.entry .buttons li{
+	line-height: 1.1em !important;
+}
 .entry .buttons li a{
 	margin-right:7px !important;
 	font-weight: normal !important;
-	color: #a2b1b9 !important;
+	color: #749fc6 !important;
 	font-size: 12px !important;
 }
 .entry .buttons li a:hover{
-	border-bottom:1px solid #a2b1b9 !important;
+	border-bottom:1px solid #749fc6 !important;
 }
 /* SEARCH */
 #search input[type=text]{
@@ -448,11 +475,43 @@ button:hover{
 	font-weight: normal !important;
 }
 
+.usertext-body{
+	
+}
+.usertext-body p{
+
+}
+.usertext-body pre{
+	margin:10px !important;
+}
+.usertext-body pre code{
+	font-size: 12px !important;
+	font-family: Courier,monospace !important;
+}
+.usertext-body a{
+	text-decoration: underline !important;
+}
+.usertext-body del{
+	text-decoration: line-through !important;
+}
+.usertext-body blockquote{
+	border-left: 2px solid grey !important;
+	margin:5px !important;
+	padding-left: 4px !important;
+	margin-right: 15px !important;
+}
+.usertext-body ul,
+.usertext-body li{
+	list-style: disc outside !important;
+}
 /* Sidebar */
 .side{
 	width: 270px !important;
 	background: none !important;
 	padding: 10px 15px !important;
+}
+.side * {
+	font-size: 13px !important;
 }
 .side .spacer{
 	margin:10px 0 20px 0 !important;
@@ -526,8 +585,8 @@ button:hover{
 }
 #show_footer{
 	display: block;
-	height: 40px;
-	line-height: 40px;
+	height: 30px;
+	line-height: 30px;
 	cursor: pointer;
 }
 .footer-parent{
@@ -565,18 +624,51 @@ button:hover{
 
 
 @media (max-width: 700px) {
+	body{
+		border: none !important;
+	}
+	#header .tabmenu{
+		top: 80px 	!important;
+		left: auto !important;
+		right:10px 	!important;
+
+		background: #FAFAFA !important;
+		border: 1px solid #DFDFDF !important;
+		width: 160px !important;
+	}
+	#header #show_tabmenu{
+		padding:0 20px 0 0 !important;
+		display: inline-block;
+		height: 50px;
+		right:0;
+		text-align: right;
+		position: absolute;
+		cursor: pointer;
+		width: 100px;
+		line-height: 60px;
+		font-size: 14px;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	#header a#show_tabmenu{
+		color: #79878E !important;
+	}
+	#header .tabmenu li,
+	#header .tabmenu li a{
+		display: block !important;
+		height: 30px !important;
+		line-height: 30px !important;
+	}
 	.side{
 		display: none !important;
 	}
 	#header{
 		height: auto !important;
 	}
-	.pagename,
-	.tabmenu{
+	.pagename{
 		display: inline-block !important;
 	}
-	#header-bottom-left,
-	#header-bottom-right{
+	#header-bottom-left{
 		position: static !important;
 		float: none !important;
 		display: block !important;
