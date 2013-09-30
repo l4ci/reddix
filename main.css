@@ -55,13 +55,24 @@ body{
 	background: white !important;
 	margin: 0 auto 		!important;
 	width: 100% 			!important;
-	max-width: 900px 	!important;
 	line-height:1.6 	!important;
 	font-size: 16px 	!important;
 	color: #3d4950 		!important;
 	border:7px solid rgba(0,0,0,0.1) !important;
 	border-top: 0 		!important;
 }
+body.width_full{
+	max-width: none 	!important;
+	border: none 			!important;
+}
+body.width_normal{
+	max-width: 900px 	!important;
+}
+body.width_small{
+	max-width: 400px 	!important;
+	border: none 			!important;
+}
+
 /* TOP HEADER */	
 #sr-header-area {
 	background: #6292bf 			!important;
@@ -235,7 +246,7 @@ body{
 	margin-right: 10px !important;
 }
 .thing .midcol .arrow{
-	background: url('chrome-extension://dccjdgekkmjancgidnkogkooeokpgjbn/sprite-reddit.png') !important;
+	background: url('chrome-extension://__MSG_@@extension_id__/sprite-reddit.png') !important;
 	margin: 2px 0 0 0 									!important;
 	margin-right: auto 									!important;
 	margin-left: auto 									!important;
@@ -291,19 +302,19 @@ body{
 	margin: 2px 8px 0 0 	!important;
 }
 .expando-button.video.collapsed{
-	background: url('chrome-extension://dccjdgekkmjancgidnkogkooeokpgjbn/sprite-reddit.png') !important;
+	background: url('chrome-extension://__MSG_@@extension_id__/sprite-reddit.png') !important;
 	background-position: -87px -584px !important;
 }
 .expando-button.video.expanded{
-	background: url('chrome-extension://dccjdgekkmjancgidnkogkooeokpgjbn/sprite-reddit.png') !important;
+	background: url('chrome-extension://__MSG_@@extension_id__/sprite-reddit.png') !important;
 	background-position: -29px -613px !important;
 }
 .expando-button.selftext.collapsed{
-	background: url('chrome-extension://dccjdgekkmjancgidnkogkooeokpgjbn/sprite-reddit.png') !important;
+	background: url('chrome-extension://__MSG_@@extension_id__/sprite-reddit.png') !important;
 	background-position: -61px -547px !important;
 }
 .expando-button.selftext.expanded{
-	background: url('chrome-extension://dccjdgekkmjancgidnkogkooeokpgjbn/sprite-reddit.png') !important;
+	background: url('chrome-extension://__MSG_@@extension_id__/sprite-reddit.png') !important;
 	background-position: -29px -584px !important;
 }
 .entry .usertext-body{
