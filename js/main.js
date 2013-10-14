@@ -1,12 +1,3 @@
-/*
- LOAD CSS AFTER PAGE LOAD
-var style = document.createElement('link');
-style.rel = 'stylesheet';
-style.type = 'text/css';
-style.href = chrome.extension.getURL('main.css');
-(document.head||document.documentElement).appendChild(style);
-*/
-
 // Insert meta viewport tag
 var $meta = $('meta[name="viewport"]');
 $meta.attr('content','width=device-width, initial-scale=1.0');
@@ -15,51 +6,6 @@ $meta.attr('content','width=device-width, initial-scale=1.0');
 // Disable subreddit stylesheet
 var $userstyle = $('link[rel="stylesheet"][title="applied_subreddit_stylesheet"]');
 $userstyle.attr('disabled', 'disabled');
-
-
-// Load Settings from LocalStorage 
-chrome.extension.sendRequest({method: "getLocalStorageAll"}, function(response) {
-  
-  console.log(response.data);
-
-  // add width_class to body
-  var width = response.data.settings_width;
-  if (width !== null){  	
-		// Load Settings Width
-		switch (width){
-			case "full":
-				$('body').addClass('width_full');
-			break;
-
-			case "normal":
-				$('body').addClass('width_normal');
-			break;
-
-			case "small":
-				$('body').addClass('width_small');
-			break;
-		}
-	}
-
-	// Add color_class to body
-	var color = response.data.settings_color;
-  if (color !== null){  	
-		// Load Settings color
-		var name = "color_"+color;
-		$('body').addClass(name);
-	}
-
-	// Keyboard Navigation
-	var keys = response.data.settings_keys;
-  if ( (keys !== null) && (keys === "yes")){  	
-		// Implement Keyboard Navigation
-		
-	}
-
-});
-
-
-
 
 
 // Disable all dropdown menu onclick event and replace with animation
